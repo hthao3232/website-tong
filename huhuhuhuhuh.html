@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Tổng Các Câu Lạc Bộ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FAFAD2;
+            text-align: center;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            font-size: 40px;
+        }
+        nav {
+            background-color: #4CAF50;
+            padding: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #45a049;
+        }
+        .container {
+            padding: 20px;
+        }
+        .club-info {
+            background-color: #FFFACD;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            display: none; /* Ẩn các câu lạc bộ mặc định */
+        }
+        .club-info h2 {
+            color: #2E8B57;
+        }
+        .footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Website Tổng - Các Câu Lạc Bộ
+    </header>
+
+    <nav>
+       <a href="clb_lam_banh.html">CLB Làm Bánh</a> 
+        <a href="hihihehe.html">CLB Thể Thao</a> 
+        <a href="clb_nghethuat.html">CLB Nghệ Thuật</a>
+
+    <div class="container">
+        <h1>Chào mừng bạn đến với Website Tổng!</h1>
+        <p>Website tổng hợp các câu lạc bộ với các hoạt động đa dạng, giúp bạn khám phá những sở thích và học hỏi thêm nhiều kỹ năng mới.</p>
+
+        <!-- Chèn nội dung CLB Làm Bánh -->
+        <div id="club1" class="club-info">
+            <iframe src="clb_lam_banh.html" width="100%" height="600px" style="border:none;"></iframe>
+        </div>
+
+        <!-- Chèn nội dung CLB Thể Thao -->
+        <div id="club2" class="club-info">
+            <iframe src="clb_the_thao.html" width="100%" height="600px" style="border:none;"></iframe>
+        </div>
+
+        <!-- Chèn nội dung CLB Nghệ Thuật -->
+        <div id="club3" class="club-info">
+            <iframe src="clb_nghe_thuat.html" width="100%" height="600px" style="border:none;"></iframe>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Website Tổng - Tất cả quyền được bảo vệ</p>
+    </div>
+
+    <script>
+        // Hàm hiển thị nội dung câu lạc bộ khi người dùng nhấp vào
+        function showClub(clubId) {
+            // Ẩn tất cả các câu lạc bộ
+            const clubs = document.querySelectorAll('.club-info');
+            clubs.forEach(function(club) {
+                club.style.display = 'none';
+            });
+
+            // Hiển thị câu lạc bộ được chọn
+            const selectedClub = document.getElementById(clubId);
+            selectedClub.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
